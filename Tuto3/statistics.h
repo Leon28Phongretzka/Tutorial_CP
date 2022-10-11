@@ -2,7 +2,7 @@
 #define _STATISTICS_H
 #include <vector>
 using namespace std;
-class standarđeviation
+class standard_deviation
 {
     private:
     size_val NumsCount; // number of numbers

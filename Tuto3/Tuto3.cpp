@@ -1,1 +1,95 @@
-#include<
+#include<iostream>
+#include"statistics.h"
+using namespace std;
+#define FAST_IO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); cerr.tie(0)
+typedef long long ll;
+typedef unsigned long long ul;
+typedef long double ld;
+typedef map<int, int> mii;
+typedef map<ll, ll> mll;
+typedef pair<ll, ll> pll;
+typedef pair<int, int> pii;
+typedef pair<double, double> pdd;
+typedef pair<bool, ll> pbl;
+typedef pair<ul, int> pui;
+typedef vector<pii> vpii;
+typedef vector<vpii> vvpii;
+typedef vector<int> vi;
+typedef vector<double> vd;
+typedef vector<vi> vvi;
+typedef vector<vvi> vvvi;
+typedef vector<bool> vb;
+typedef vector<vb> vvb;
+typedef vector<pll> vpll;
+typedef vector<ll> vl;
+typedef vector<vl> vvl;
+typedef vector<pbl> vpbl;
+typedef vector<double> vd;
+typedef vector<vd> vvd;
+typedef vector<pdd> vpdd;
+typedef vector<string> vs;
+typedef vector<pui> vpui;
+typedef vector<ul> vu;
+typedef vector<string> vs;
+#define mp make_pair
+#define gl getline
+#define pb push_back
+#define eb emplace_back
+#define ob pop_back
+#define sz(s) ((int)(s.size()))
+#define UM uno\nrdered_map
+#define US uno\nrdered_set
+#define forn(i, n) for (int i = 0; i < int(n); i++)
+#define fora(i, n) for(auto i:n)
+void solve()
+{
+    standard_deviation sd;
+    ll count;
+    vd data;
+    double num;
+    // Get the number in the data set
+    cout << "Enter the number of data set: ";
+    cin >> count;
+    sd.setNumsCount(count);
+    // Get the data set
+    cout << "Enter the data set: ";
+    for (int i = 0; i < count; i++)
+    {
+        cin >> num;
+        data.push_back(num);
+    }
+    sd.setData(data);
+    // Mean and Variance of the data set
+    if(count==1)
+    {
+        cout << sd.mean(sd.setData()[0]) << endl;
+        cout << sd.variance(sd.setData()[0]) << endl;
+    }
+    else if(count==2)
+    {
+        cout << sd.mean(sd.setData()[0], sd.setData()[1]) << endl;
+        cout << sd.mean(sd.setData()[0], sd.setData()[1]) << endl;
+    }
+    else if(count==3)
+    {
+        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2]) << endl;
+        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2]) << endl;
+    }
+    else if(count==4)
+    {
+        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2], sd.setData()[3]) << endl;
+        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2], sd.setData()[3]) << endl;
+    }
+    else
+    {
+        cout << sd.mean(sd.setData()) << endl;
+        cout << sd.mean(sd.setData()) << endl;
+    }
+}
+int main() 
+{
+    FAST_IO;
+    // freopen("time.in", "r", stdin); freopen("time.out", "w", stdout);
+    // ll tt; cin >> tt; while(tt--) {solve();}
+    solve();
+}
