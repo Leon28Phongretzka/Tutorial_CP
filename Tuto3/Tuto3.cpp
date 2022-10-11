@@ -5,32 +5,6 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ul;
 typedef long double ld;
-typedef map<int, int> mii;
-typedef map<ll, ll> mll;
-typedef pair<ll, ll> pll;
-typedef pair<int, int> pii;
-typedef pair<double, double> pdd;
-typedef pair<bool, ll> pbl;
-typedef pair<ul, int> pui;
-typedef vector<pii> vpii;
-typedef vector<vpii> vvpii;
-typedef vector<int> vi;
-typedef vector<double> vd;
-typedef vector<vi> vvi;
-typedef vector<vvi> vvvi;
-typedef vector<bool> vb;
-typedef vector<vb> vvb;
-typedef vector<pll> vpll;
-typedef vector<ll> vl;
-typedef vector<vl> vvl;
-typedef vector<pbl> vpbl;
-typedef vector<double> vd;
-typedef vector<vd> vvd;
-typedef vector<pdd> vpdd;
-typedef vector<string> vs;
-typedef vector<pui> vpui;
-typedef vector<ul> vu;
-typedef vector<string> vs;
 #define mp make_pair
 #define gl getline
 #define pb push_back
@@ -39,13 +13,11 @@ typedef vector<string> vs;
 #define sz(s) ((int)(s.size()))
 #define UM uno\nrdered_map
 #define US uno\nrdered_set
-#define forn(i, n) for (int i = 0; i < int(n); i++)
-#define fora(i, n) for(auto i:n)
 void solve()
 {
     standard_deviation sd;
     ll count;
-    vd data;
+    vector<double> data;
     double num;
     // Get the number in the data set
     cout << "Enter the number of data set: ";
@@ -62,28 +34,28 @@ void solve()
     // Mean and Variance of the data set
     if(count==1)
     {
-        cout << sd.mean(sd.setData()[0]) << endl;
-        cout << sd.variance(sd.setData()[0]) << endl;
+        cout << sd.mean(sd.getData()[0]) << endl;
+        cout << sd.variance(sd.getData()[0]) << endl;
     }
     else if(count==2)
     {
-        cout << sd.mean(sd.setData()[0], sd.setData()[1]) << endl;
-        cout << sd.mean(sd.setData()[0], sd.setData()[1]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1]) << endl;
     }
     else if(count==3)
     {
-        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2]) << endl;
-        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
     }
     else if(count==4)
     {
-        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2], sd.setData()[3]) << endl;
-        cout << sd.mean(sd.setData()[0], sd.setData()[1], sd.setData()[2], sd.setData()[3]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
+        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
     }
     else
     {
-        cout << sd.mean(sd.setData()) << endl;
-        cout << sd.mean(sd.setData()) << endl;
+        cout << sd.mean(sd.getData()) << endl;
+        cout << sd.mean(sd.getData()) << endl;
     }
 }
 int main() 
