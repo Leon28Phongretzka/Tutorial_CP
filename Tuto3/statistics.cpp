@@ -6,7 +6,7 @@ standardDeviation::standardDeviation()
     data.clear();
 }
 
-void standardDeviation::setNumbersCount(size_t count)
+void standardDeviation::NumbersCount(size_t count)
 {
     numbersCount = count;
 }
@@ -16,12 +16,12 @@ void standardDeviation::Data(vector<double> dataSet)
     data = data;
 }
 
-vector<double> standardDeviation::getData()
+vector<double> standardDeviation::Data()
 {
     return data;
 }
 
-size_t standardDeviation::getNumbersCount()
+size_t standardDeviation::NumbersCount()
 {
     return numbersCount;
 }

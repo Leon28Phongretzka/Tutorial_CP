@@ -12,10 +12,10 @@ private:
 public:
     // constructor
     standardDeviation();                                                             
-    void setNumbersCount(size_t);                                                    
+    void NumbersCount(size_t);                                                    
     void Data(vector<double>);                                                    
-    vector<double> getData();                                                        
-    size_t getNumbersCount();                                                        
+    vector<double> Data();                                                        
+    size_t NumbersCount();                                                        
     double mean(double number);                                                      
     double mean(double number1, double number2);                                     
     double mean(double number1, double number2, double number3);                    
