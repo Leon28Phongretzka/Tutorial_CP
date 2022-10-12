@@ -13,7 +13,7 @@ public:
     // constructor
     standardDeviation();                                                             
     void NumbersCount(size_t);                                                    
-    void Data(vector<double>);                                                    
+    void Data(vector<double>);                                           
     vector<double> Data();                                                        
     size_t NumbersCount();                                                        
     double mean(double number);                                                      
