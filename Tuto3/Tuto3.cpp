@@ -1,67 +1,51 @@
-#include<iostream>
-#include"statistics.h"
-using namespace std;
-#define FAST_IO ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); cerr.tie(0)
-typedef long long ll;
-typedef unsigned long long ul;
-typedef long double ld;
-#define mp make_pair
-#define gl getline
-#define pb push_back
-#define eb emplace_back
-#define ob pop_back
-#define sz(s) ((int)(s.size()))
-#define UM uno\nrdered_map
-#define US uno\nrdered_set
-void solve()
+#include <bits/stdc++.h>
+#include "statistics.cpp"
+int main()
 {
-    standard_deviation sd;
-    ll count;
-    vector<double> data;
-    double num;
-    // Get the number in the data set
-    cout << "Enter the number of data set: ";
+    // declare variables
+    standardDeviation sd;
+    long long count;
+    vector<double> dataSet;
+    double number;
+    // get the number of numbers in the data set
+    cout << "Enter the number of numbers in the data set: " << endl;
     cin >> count;
-    sd.setNumsCount(count);
-    // Get the data set
-    cout << "Enter the data set: ";
-    for (int i = 0; i < count; i++)
+    // get the numbers in the data set
+    sd.setNumbersCount(count);
+
+    // get the data set
+    cout << "Enter the numbers in the data set: ";
+    for (size_t i = 0; i < count; i++)
     {
-        cin >> num;
-        data.push_back(num);
+        cin >> number;
+        dataSet.push_back(number);
     }
-    sd.setData(data);
-    // Mean and Variance of the data set
+    sd.Data(dataSet);
+    // calculate the mean and variance of the data set
     if(count==1)
     {
-        cout << sd.mean(sd.getData()[0]) << endl;
-        cout << sd.variance(sd.getData()[0]) << endl;
+        cout << "The mean of the data set is: " << sd.mean(sd.getData()[0]) << endl;
+        cout << "The variance of the data set is: " << sd.variance(sd.getData()[0]) << endl;
     }
     else if(count==2)
     {
-        cout << sd.mean(sd.getData()[0], sd.getData()[1]) << endl;
-        cout << sd.mean(sd.getData()[0], sd.getData()[1]) << endl;
+        cout << "The mean of the data set is: " << sd.mean(sd.getData()[0], sd.getData()[1]) << endl;
+        cout << "The variance of the data set is: " << sd.variance(sd.getData()[0], sd.getData()[1]) << endl;
     }
     else if(count==3)
     {
-        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
-        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
+        cout << "The mean of the data set is: " << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
+        cout << "The variance of the data set is: " << sd.variance(sd.getData()[0], sd.getData()[1], sd.getData()[2]) << endl;
     }
     else if(count==4)
     {
-        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
-        cout << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
+        cout << "The mean of the data set is: " << sd.mean(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
+        cout << "The variance of the data set is: " << sd.variance(sd.getData()[0], sd.getData()[1], sd.getData()[2], sd.getData()[3]) << endl;
     }
     else
     {
-        cout << sd.mean(sd.getData()) << endl;
-        cout << sd.mean(sd.getData()) << endl;
+        cout << "The mean of the data set is: " << sd.mean(dataSet) << endl;
+        cout << "The variance of the data set is: " << sd.variance(dataSet) << endl;
     }
-}
-int main() 
-{
-    FAST_IO;
-    // freopen("time.in", "r", stdin); freopen("time.out", "w", stdout);
-    // ll tt; cin >> tt; while(tt--) {solve();}
-    solve();
+    return 0;
 }
